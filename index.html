@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Inter and Roboto Mono Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="inline-block">
+        <div id="menuToggle">
+          <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+          <input type="checkbox" />
+
+          <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Image Start -->
+  <section class="heroImg">
+    <h1><img src="images/hero-image.png" alt="hero image" class="fluid-img"></h1>
+  </section>
+  <!-- Hero Image End -->
+  <!-- About Start -->
+  <section id="about-section">
+    <div class="container">
+      <h2 class="section-title">ABOUT</h2>
+      <div class="section-row">
+        <div class="section-col">
+          <div class="about-text">
+            <p>Hello, I'm Sarah, an interior designer transitioning into the exciting world of UX/UI design. I thrive on
+              crafting user-centered experiences that seamlessly blend functionality and aesthetics. <br><br>
+              With a meticulous eye for detail and a passion for problem-solving, I am driven to create intuitive
+              designs that make a positive impact. As a junior UX/UI designer, I'm seeking opportunities to collaborate
+              with forward-thinking clients who value user-centricity and embrace innovation. Let's create meaningful
+              digital experiences together!</p>
+          </div>
+          <a href="#" class="about-link"><img src="images/arrow-long.svg" alt="arrow-long"></a>
+        </div>
+        <div class="section-col">
+          <div class="about-image">
+            <img src="https://picsum.photos/500/500" alt="about image" class="fluid-img">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About End -->
+
+  <!-- Skills Start -->
+  <section id="skills-section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="section-row">
+        <div class="section-col">
+          <div class="skills">
+            <div class="skill-item">
+              <div class="skill-name">Figma</div>
+              <div class="skill-progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">ADOBE XD</div>
+              <div class="skill-progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">MIRO</div>
+              <div class="skill-progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">PHOTOSHOP</div>
+              <div class="skill-progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">ILLUSTRATOR</div>
+              <div class="skill-progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills End -->
+
+  <!-- Project Start -->
+  <section id="projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-row">
+        <div class="section-col">
+          <div class="project-image">
+            <figure>
+              <img src="images/projectImg1.png" alt="save the koalas project photo" class="fluid-img">
+              <figcaption>
+                SAVE THE KOALAS
+                <span>redesign UX/UI</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="section-col">
+          <div class="project-text">
+            <p>The project involved a comprehensive evaluation and redesign of the Save the Koalas website, a charity
+              organization dedicated to rehabilitating koalas. The objective was to enhance user experience and
+              establish credibility by creating a more user-friendly and visually appealing website. The redesign
+              focused on streamlining the donation process to ensure a seamless and trustworthy experience for users,
+              ultimately supporting the organization's important cause.</p>
+          </div>
+          <a href="#" class="project-link"><img src="images/arrow-long.svg" alt="arrow-long"></a>
+        </div>
+
+      </div>
+      <div class="section-row row-reverse">
+
+        <div class="section-col">
+          <div class="project-text">
+            <p>The project centered around designing and developing a comprehensive travel app that enables users to
+              create personalized itineraries, collaborate on organizing tasks, access destination information, and
+              effortlessly book flights and accommodations. By adopting a user-centered approach, the app aimed to
+              revolutionize the travel planning experience. The focus was on creating an intuitive and convenient
+              all-in-one solution, enhancing the overall journey for travelers and their companions. The app aimed to
+              simplify the complexities of travel planning while providing a seamless and enjoyable user experience.</p>
+          </div>
+          <a href="#" class="project-link"><img src="images/arrow-long.svg" alt="arrow-long"></a>
+        </div>
+        <div class="section-col">
+          <div class="project-image">
+            <figure>
+              <img src="images/projectImg2.png" alt="go far project photo" class="fluid-img">
+              <figcaption>
+                SAVE THE KOALAS
+                <span>redesign UX/UI</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="section-row">
+        <div class="section-col">
+          <div class="project-image">
+
+            <figure>
+              <img src="images/projectImg3.png" alt="workforce project photo" class="fluid-img">
+              <figcaption>
+                SAVE THE KOALAS
+                <span>redesign UX/UI</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="section-col">
+          <div class="project-text">
+            <p>The project involved redesigning the Australian government website Workforce to improve user experience
+              and ease of use. By applying strategic design decisions and a user-centered approach, the goal was to
+              create a more intuitive and accessible platform for workforce-related information. The project encompassed
+              redesigning the home page and site map, streamlining navigation, enhancing visual aesthetics, and
+              optimizing the user journey to establish a trustworthy and efficient digital resource.</p>
+          </div>
+          <a href="#" class="project-link"><img src="images/arrow-long.svg" alt="arrow-long"></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Project End -->
+
+  <!-- footer-top start -->
+  <section class="footer-top" id="contact-section">
+    <a href="#">LETS CREATE TOGETHER</a>
+  </section>
+  <!-- footer-top end -->
+
+  <!-- Footer Start -->
+  <footer>
+    <ul class="social-links">
+      <li><a href="#">INSTAGRAM</a></li>
+      <li><a href="#">GITHUB</a></li>
+      <li><a href="#">LINKEDIN</a></li>
+      <li><a href="#">RESUME</a></li>
+    </ul>
+
+    <div class="copy-right">
+      <p>Copyright © 2023 Sarah Moon. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+</body>
+
+</html>

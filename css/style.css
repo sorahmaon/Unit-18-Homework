@@ -1,0 +1,433 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000;
+}
+.fluid-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Nav */
+nav.inline-block {
+  padding: 25px 0;
+}
+
+nav.inline-block ul {
+  text-align: right;
+}
+
+nav.inline-block ul li a {
+  font-size: 16px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+nav.inline-block ul li a:hover {
+  color: #fa9d31;
+}
+#menuToggle input {
+  display: none;
+}
+/* Mobile menu */
+@media (max-width: 767.98px) {
+  div#menuToggle {
+    position: relative;
+    z-index: 1;
+    user-select: none;
+  }
+
+  div#menuToggle ul {
+    position: absolute;
+    width: 100%;
+    transform-origin: 0% 0%;
+    transform: translate(0, -108%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    background-color: #fff;
+    padding: 25px 20px;
+  }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: 25px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: auto;
+    background: #232323;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    right: 25px;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+}
+
+/* Section style */
+
+/* heroImg style */
+.heroImg {
+  padding: 30px;
+  text-align: center;
+}
+/* Section style */
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+}
+.section-col {
+  width: 100%;
+}
+.section-title {
+  font-size: 20px;
+  letter-spacing: 10px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+/* about-section  */
+
+#about-section .section-row {
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.about-image img {
+  border-radius: 8px;
+}
+
+.about-text {
+  margin-bottom: 15px;
+  background-color: #d9d9d9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.about-text p {
+  font-family: "Roboto Mono", monospace;
+}
+.about-link {
+  float: right;
+  transition: all 0.3s;
+}
+.about-link:hover {
+  margin-right: -10px;
+}
+/* Skills */
+
+.skill-progress {
+  display: flex;
+  height: 14px;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fa9d31;
+}
+
+.skill-item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  text-transform: uppercase;
+}
+
+/* Project Style */
+
+.project-image figcaption {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.project-image figcaption span {
+  font-size: 14px;
+  color: #bdbdbd;
+  display: block;
+}
+
+#projects-section .section-row {
+  gap: 25px;
+  margin-bottom: 40px;
+}
+#projects-section .row-reverse {
+  flex-direction: column-reverse;
+}
+.project-link {
+  float: right;
+  transition: all 0.3s;
+}
+.project-link:hover {
+  margin-right: -10px;
+}
+.project-text {
+  margin-bottom: 15px;
+  background-color: #d9d9d9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.project-text p {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Footer Top */
+
+section.footer-top {
+  text-align: center;
+}
+
+section.footer-top a {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+section.footer-top a:hover {
+  color: #fa9d31;
+}
+/* Footer */
+footer {
+  padding: 50px 20px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.copy-right {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* Media query */
+
+@media (min-width: 768px) {
+  nav.inline-block ul li {
+    display: inline-block;
+  }
+  nav.inline-block ul li a {
+    padding: 10px 15px;
+  }
+
+  .heroImg {
+    padding: 10%;
+    text-align: center;
+  }
+  .heroImg img {
+    max-width: 265px;
+  }
+
+  #about-section .section-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    margin: 0 -15px;
+  }
+  #about-section .section-row .section-col {
+    width: 50%;
+    padding: 15px;
+  }
+
+  .skills {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .skill-item {
+    border-bottom: 1px solid;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .skill-name {
+    width: 25%;
+  }
+  #projects-section .section-row {
+    gap: 0;
+    margin: 0 -15px 40px;
+    align-items: center;
+  }
+  #projects-section .section-row .section-col {
+    width: 50%;
+    padding: 15px;
+  }
+
+  #projects-section .row-reverse {
+    flex-direction: row;
+  }
+
+  section.footer-top {
+    padding-bottom: 100px;
+  }
+  section.footer-top a {
+    font-size: 36px;
+    letter-spacing: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 18px;
+  }
+  nav.inline-block ul li a {
+    font-size: 24px;
+
+    padding: 15px 20px;
+  }
+  .heroImg img {
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 36px;
+    letter-spacing: 18px;
+
+    margin-bottom: 60px;
+  }
+  #about-section .section-row .section-col {
+    width: 47%;
+  }
+  .skill-item {
+    border-bottom: 1px solid;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+  }
+  .skill-name {
+    font-size: 24px;
+  }
+  #projects-section .section-row {
+    gap: 0;
+    margin-bottom: 85px;
+    justify-content: space-between;
+  }
+  #projects-section .section-row .section-col {
+    width: 47%;
+  }
+  .project-text,
+  .about-text {
+    padding: 25px;
+  }
+  .social-links {
+    max-width: 800px;
+  }
+  .social-links a {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+  .social-links a:hover {
+    color: #fa9d31;
+  }
+  footer {
+    padding-bottom: 50px;
+  }
+  .copy-right {
+    margin-top: 28px;
+  }
+}
